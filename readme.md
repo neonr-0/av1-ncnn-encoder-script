@@ -11,12 +11,12 @@ Here is 3 scripts:
 
 ## AI Enhance Script
 
-### Requiments:
+### Requirements:
 
 - Vulkan capable GPU with 2GB+ VRAM
 - Storage space to hold all frames in video
 
-To use this script you need GPU with Vulkan support on it (works on latests intel iGPU too), there are no support for CPU processing, CPU load will be only read input images and to compress output images with WebP file format. 
+To use this script you need GPU with Vulkan support on it (works on latest intel iGPU too), there are no support for CPU processing, CPU load will be only read input images and to compress output images with WebP file format. 
 
 [RealESRGAN](https://github.com/neonr-0/Real-ESRGAN-ncnn-vulkan) was slightly modified to apply downscaling and remove original file. 
 
@@ -33,7 +33,7 @@ This method of encoding uses a lot of writing so be careful using SSD due to hig
 
 ## Storage Server Script
 
-This is just simple TCP server to get all data from AI Enchance script, so make sure you have enough storage to hold data for AV1 encoding machines.
+This is just simple TCP server to get all data from AI Enhance script, so make sure you have enough storage to hold data for AV1 encoding machines.
 
 ## AV1 Encoder
 
@@ -62,8 +62,8 @@ Main settings
 ### Windows
 
 1. Install [Python](https://www.python.org/downloads/) 3.8+
-1. Make sure you have latests drivers installed
-1. Download latests release of ai-enhance.zip
+1. Make sure you have latest drivers installed
+1. Download latest release of ai-enhance.zip
 1. Unpack it into folder
 1. Create folder input
 1. Edit settings in **main.py** to fit your requirements
@@ -103,7 +103,7 @@ zypper in python3
 
 # AV1 Encoder Script
 
-You can launch this script in multiple instances if need due to not full utilisation of all avaiable cores.
+You can launch this script in multiple instances if need due to not full utilization of all available cores.
 You can edit paths to where is your data located in **main.py**
 ```
 #settings
