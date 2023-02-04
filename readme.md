@@ -39,6 +39,17 @@ This is just simple TCP server to get all data from AI Enhance script, so make s
 
 This script focused only on CPU encoding and don't rely on GPU encoding, for better ratio of encoding speed/NCNN frames processing I will recommend to tune it. By default it's preset 0 (extremely slow). Check [Performance](#Performance) header.
 
+# Example
+
+input 1920x1080 PNG, model: realesr-animevideov3-x2, scale 2x, downscale 2x
+|input|output|
+|---|---|
+|![input](./examples/input.png)|![output](./examples/out_scale_2x_2x.png)|
+|200%|200%|
+|![input](./examples/in_1.png)|![output](./examples/out_1.png)|
+|![input](./examples/in_2.png)|![output](./examples/out_2.png)|
+|![input](./examples/in_3.png)|![output](./examples/out_3.png)|
+
 # AI Enhance Script 
 
 ReasESRGAN parameters:

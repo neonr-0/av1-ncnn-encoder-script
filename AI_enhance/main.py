@@ -27,10 +27,10 @@ audio_cmd_line = '-c:a libfdk_aac -vbr 4 -map 0:a:0' #you can change if you want
 #audio_cmd_line = '-c:a copy' #uncomment this if you want to keep original audio
 audio_file_type = '.aac'
 #realesrgan parameters
-noise_level = 2 # 0|1|2|3
 scale_ratio = 2 # 1-4
 downsscale_ratio = 2 # 1-4
-ncnn_model = "realesr-animevideov3-x2" # realesrgan-x4plus-anime
+ncnn_model = 'realesr-animevideov3-x2' # realesrgan-x4plus-anime
+tile_size = '512'
 #Options
 thread_count = 6 # sending threads
 FastFirstPass = True # making png images instead of webp at video decoding stage (faster but takes more drive space)
@@ -71,7 +71,7 @@ def buildFFmpegCommandRAW(inputFile,outputFolder,FastMode):
     return commands_list
 
 def BuildNCNNCommand(inputFile,outputFile):
-    commands_list = f'{realesrgan} -i "{inputFile}" -s {scale_ratio} -o "{outputFile}" -n {ncnn_model} -t 512 -f webp -j 8:2:20 -r -d {downsscale_ratio}'
+    commands_list = f'{realesrgan} -i "{inputFile}" -s {scale_ratio} -o "{outputFile}" -n {ncnn_model} -t {tile_size} -f webp -j 8:2:20 -r -d {downsscale_ratio}'
     return commands_list
 
 def runProcess(cmds):
